@@ -1,0 +1,84 @@
+﻿using System;
+
+// Define Employee class
+class Employee
+{
+    // Property for employee ID
+    public int Id { get; set; }
+
+    // Property for first name
+    public string FirstName { get; set; }
+
+    // Property for last name
+    public string LastName { get; set; }
+
+    // Overload == operator to compare employees by Id
+    public static bool operator ==(Employee emp1, Employee emp2)
+    {
+        // Check if both objects are the same
+        if (ReferenceEquals(emp1, emp2))
+            return true;
+
+        // Check if either object is null
+        if (emp1 is null || emp2 is null)
+            return false;
+
+        // Compare Id values
+        return emp1.Id == emp2.Id;
+    }
+
+    // Overload != operator (must be paired with ==)
+    public static bool operator !=(Employee emp1, Employee emp2)
+    {
+        return !(emp1 == emp2);
+    }
+
+    // Override Equals method
+    public override bool Equals(object obj)
+    {
+        if (obj is Employee emp)
+        {
+            return this.Id == emp.Id;
+        }
+        return false;
+    }
+
+    // Override GetHashCode method
+    public override int GetHashCode()
+    {
+        return Id.GetHashCode();
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Create first Employee object
+        Employee emp1 = new Employee();
+        emp1.Id = 1;
+        emp1.FirstName = "John";
+        emp1.LastName = "Doe";
+
+        // Create second Employee object
+        Employee emp2 = new Employee();
+        emp2.Id = 2;
+        emp2.FirstName = "Jane";
+        emp2.LastName = "Smith";
+
+        // Compare the two employees using overloaded ==
+        bool isEqual = emp1 == emp2;
+
+        // Display result
+        Console.WriteLine("Are employees equal? " + isEqual);
+
+        // Compare using != operator
+        bool notEqual = emp1 != emp2;
+
+        // Display result
+        Console.WriteLine("Are employees NOT equal? " + notEqual);
+
+        // Keep console open
+        Console.ReadLine();
+    }
+}
