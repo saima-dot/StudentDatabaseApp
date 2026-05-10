@@ -1,16 +1,33 @@
-# C# Entity Framework Code First Project
+# C# Course Portfolio
 
-## Project Description
-This is a simple console application built using Entity Framework Code First. It creates a Student database and inserts one student record.
+## Projects Completed
 
-## What I learned
-- Entity Framework Code First
-- DbContext and models
-- Database creation from code
-- GitHub project management
+### 1. Student Database App (Entity Framework Code First)
+- Built a console application using Entity Framework Code First
+- Created a Student database and inserted records
+- Learned DbContext, models, and database connections
 
-## Technologies Used
+### 2. Insurance Quote Application
+- Built an application for generating insurance quotes
+- Practiced C# classes, methods, and calculations
+- Improved debugging and problem-solving skills
+
+### 3. MVC and Web Development Exercises
+- Worked with controllers, models, and views
+- Learned routing and application structure
+- Practiced creating and testing web applications
+
+## Technical Skills Gained
 - C#
-- .NET Console App
+- Object-Oriented Programming
 - Entity Framework
-- SQL Server (LocalDB)
+- SQL Database Basics
+- MVC Architecture
+- Git and GitHub
+- Debugging and Troubleshooting
+
+## Tools and Technologies
+- Visual Studio
+- GitHub
+- SQL Server LocalDB
+- .NET Framework
